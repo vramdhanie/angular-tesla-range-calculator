@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { BatteryService } from './tesla-battery.service';
+import { TeslaBatteryComponent } from './containers/tesla-battery/tesla-battery.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TeslaBatteryComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule
@@ -13,7 +16,9 @@ import { BatteryService } from './tesla-battery.service';
   providers: [
     BatteryService
   ],
-  exports: []
+  exports: [
+    TeslaBatteryComponent
+  ]
 })
 
 export class TeslaBatteryModule {}
